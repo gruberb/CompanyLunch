@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-roulette",
+  "version": "1.0.0",
+  "description": "Lets get some help in picking the right spot to eat",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gruberb/RestaurantRoulette.git"
+  },
+  "keywords": [
+    "ReactJS",
+    "Webpack",
+    "ES6",
+    "Web",
+    "Application"
+  ],
+  "author": "Bastian Gruber <gruberbastian@me.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gruberb/RestaurantRoulette/issues"
+  },
+  "homepage": "https://github.com/gruberb/RestaurantRoulette#readme"
+}
