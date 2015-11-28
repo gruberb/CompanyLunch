@@ -1,7 +1,17 @@
 import React from "react";
-import Greeting from "./greeting";
+import ReactDOM from "react-dom";
 
-React.render(
-  <Greeting name="World"/>,
-  document.body
+var CommentBox = React.createClass({
+  render: function() {
+    return (
+      <div className="commentBox">
+        Hello, world! I am a CommentBox.
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(
+  <CommentBox />,
+  document.getElementById('app')
 );
