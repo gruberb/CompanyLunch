@@ -3,3 +3,4 @@ npm-debug.log
 build
 public
 .DS_STORE
+dist
