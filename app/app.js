@@ -1,17 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
-      </div>
-    );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { txt: "This is the current state" }
   }
-});
+  update(e) {
+    this.setState({txt: e.target.value })
+  }
+  render() {
+    return (
+      <div>
+        <input type="Text" onChange={this.update.bind(this)} />
+        <h1>{this.state.txt}</h1>
+      </div>
+    )
+  }
+}
 
-ReactDOM.render(
-  <CommentBox />,
-  document.getElementById('app')
-);
+App.propTypes = {
+  txt: React.PropTypes.string,
+  cat: React.PropTypes.number.isRequired
+}
+
+export default App

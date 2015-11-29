@@ -1,27 +1,23 @@
+var path = require('path');
+
 module.exports = {
-  context: __dirname + "/app",
-  entry: {
-    javascript: "./app.js",
-    html: "./index.html",
-  },
+  entry: path.resolve(__dirname, 'app/main.js'),
   output: {
-    filename: "app.js",
-    path: __dirname + "/build",
+      path: path.resolve(__dirname, 'build'),
+      filename: 'bundle.js',
   },
+  devtool: 'source-map',
   module: {
     loaders: [
       {
-        test: /\.html$/,
-        loader: "file?name=[name].[ext]",
-      },
-      {
-        test: /\.js$/,
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel',
-        exclude: /node_modules/,
         query: {
-          cacheDirectory: true,
-          presets: ['es2015', 'react']
-        }
+                // https://github.com/babel/babel-loader#options
+                cacheDirectory: true,
+                presets: ['es2015', 'react']
+            }
       }
     ]
   }

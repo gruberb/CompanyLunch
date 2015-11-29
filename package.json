@@ -4,8 +4,9 @@
   "description": "Lets get some help in picking the right spot to eat",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline"
-  },
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gruberb/RestaurantRoulette.git"
