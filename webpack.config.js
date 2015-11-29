@@ -7,7 +7,10 @@ module.exports = {
       filename: 'bundle.js',
       publicPath: '/'
   },
-  devtool: 'source-map',
+  devServer: {
+    inline: true,
+    contentBase: './dist',
+  },
   module: {
     loaders: [
       {
