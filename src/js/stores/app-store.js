@@ -10,7 +10,7 @@ for ( let i = 1; i < 9; i++) {
   _restaurants.push({
     'id': i,
     'title': 'Restaurant #' + i,
-    'summary': 'Super #{i} restaurant',
+    'summary': 'Super ' + i + ' restaurant',
     'description': 'Super lecker',
     'cost': i
   });
@@ -26,9 +26,9 @@ const _findRestaurant = ( restaurant ) => {
 
 const _addRestaurant = ( restaurant ) => {
   if( !!!_findRestaurant( restaurant ) ) {
+      restaurant.id = _restaurants.length + 1;
+      restaurant.summary = 'new summary';
       _restaurants.push(restaurant);
-  } else {
-    console.log('restaurant already there');
   }
 }
 
@@ -46,6 +46,7 @@ const AppStore = Object.assign( EventEmitter.prototype, {
   },
 
   getRestaurants() {
+    console.log('get restaurants');
     return _restaurants;
   },
 

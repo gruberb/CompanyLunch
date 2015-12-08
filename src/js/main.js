@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/app"
+import React from 'react';
+import ReactDOM from 'react-dom';
+import RestaurantRoulette from './components/restaurant-roulette';
 
 ReactDOM.render(
-  <App />,
+  <RestaurantRoulette />,
   document.getElementById('main')
 );
