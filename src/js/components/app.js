@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-class App extends React.Component {
-  render() {
+var App = React.createClass({
+  render: function() {
     return <h1>A Flux App</h1>
   }
-}
+});
 
-export default App
+export default App;
