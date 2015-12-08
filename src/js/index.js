@@ -4,5 +4,5 @@ import RestaurantRoulette from './components/restaurant-roulette';
 
 ReactDOM.render(
   <RestaurantRoulette />,
-  document.getElementById('main')
+  document.getElementById('app')
 );

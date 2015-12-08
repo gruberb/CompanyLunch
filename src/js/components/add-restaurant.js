@@ -5,9 +5,9 @@ import AppStore from '../stores/app-store';
 class AddRestaurant extends React.Component{
   constructor() {
     super();
+    this.state = { restaurant: { title: '' } };
     this.handleKeyPress = this.handleKeyPress.bind( this );
     this.onChange = this.onChange.bind( this );
-    this.state = { restaurant: { title: '' } };
   }
 
   handleKeyPress(event) {
@@ -18,7 +18,7 @@ class AddRestaurant extends React.Component{
   }
 
   onChange(event) {
-    this.setState({restaurant: {title: event.target.value}});
+    this.setState( { restaurant: { title: event.target.value } } );
   }
 
   render() {
