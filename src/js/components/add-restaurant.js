@@ -5,14 +5,15 @@ import AppStore from '../stores/app-store';
 class AddRestaurant extends React.Component{
   constructor() {
     super();
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.onChange = this.onChange.bind(this);
-    this.state = { restaurant: {title: ''}};
+    this.handleKeyPress = this.handleKeyPress.bind( this );
+    this.onChange = this.onChange.bind( this );
+    this.state = { restaurant: { title: '' } };
   }
 
   handleKeyPress(event) {
     if (event.key === 'Enter') {
-      AppActions.addRestaurant(this.state.restaurant);
+      AppActions.addRestaurant( this.state.restaurant );
+      event.target.value = '';
     }
   }
 
@@ -23,7 +24,7 @@ class AddRestaurant extends React.Component{
   render() {
     return (
       <div className="row">
-        <input type="text" onKeyDown={ this.handleKeyPress } onChange={this.onChange} value={ this.state.restaurant.title }/>
+        <input type="text" onKeyDown={ this.handleKeyPress } onChange={ this.onChange } value={ this.state.restaurant.title }/>
       </div>
     )
   }

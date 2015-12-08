@@ -5,7 +5,7 @@ import AddRestaurant from './add-restaurant';
 class RestaurantRoulette extends React.Component{
   render() {
     return (
-      <div>
+      <div className='row'>
         <AddRestaurant />
         <RestaurantList />
       </div>

@@ -1,6 +1,7 @@
 import { dispatch, register } from '../dispatchers/app-dispatcher';
 import AppConstant from '../constants/app-constants';
 import { EventEmitter } from 'events';
+import { guid } from '../lib/utils';
 
 const CHANGE_EVENT = 'change';
 
@@ -8,7 +9,7 @@ var _restaurants = [];
 
 for ( let i = 1; i < 9; i++) {
   _restaurants.push({
-    'id': i,
+    'id': guid(),
     'title': 'Restaurant #' + i,
     'summary': 'Super ' + i + ' restaurant',
     'description': 'Super lecker',
@@ -26,9 +27,9 @@ const _findRestaurant = ( restaurant ) => {
 
 const _addRestaurant = ( restaurant ) => {
   if( !!!_findRestaurant( restaurant ) ) {
-      restaurant.id = _restaurants.length + 1;
+      restaurant.id = guid();
       restaurant.summary = 'new summary';
-      _restaurants.push(restaurant);
+      _restaurants.unshift(restaurant);
   }
 }
 
@@ -46,7 +47,6 @@ const AppStore = Object.assign( EventEmitter.prototype, {
   },
 
   getRestaurants() {
-    console.log('get restaurants');
     return _restaurants;
   },
 
