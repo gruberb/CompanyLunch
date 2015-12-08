@@ -1,5 +1,5 @@
 import { dispatch, register } from '../dispatchers/app-dispatcher';
-import AppConsstants from '../constants/app-constants';
+import AppConstant from '../constants/app-constants';
 import { EventEmitter } from 'events';
 
 const CHANGE_EVENT = 'change';
@@ -25,12 +25,14 @@ const _findRestaurant = ( restaurant ) => {
 }
 
 const _addRestaurant = ( restaurant ) => {
-  if( !!!_findRestaurant( restraunt ) ) {
+  if( !!!_findRestaurant( restaurant ) ) {
       _restaurants.push(restaurant);
+  } else {
+    console.log('restaurant already there');
   }
 }
 
-const AppStore = Object.assign( EventEmitter.protoype, {
+const AppStore = Object.assign( EventEmitter.prototype, {
   emitChange() {
     this.emit( CHANGE_EVENT )
   },
@@ -62,7 +64,7 @@ const AppStore = Object.assign( EventEmitter.protoype, {
 
     AppStore.emitChange();
 
-  });
+  })
 });
 
 export default AppStore;
