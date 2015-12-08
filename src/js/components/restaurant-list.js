@@ -27,12 +27,13 @@ class RestaurantList extends React.Component{
 
   render() {
     console.log('render restaurant-list');
+    window.restaurants = this.state.restaurants;
     let restaurants = this.state.restaurants.map( restaurant => {
       return <RestaurantEntry key={ restaurant.id } restaurant={ restaurant } />
     })
 
     return (
-      <div className="row">
+      <div>
         { restaurants }
       </div>
     )

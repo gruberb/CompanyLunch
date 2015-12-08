@@ -28,7 +28,6 @@ const _findRestaurant = ( restaurant ) => {
 const _addRestaurant = ( restaurant ) => {
   if( !!!_findRestaurant( restaurant ) ) {
       restaurant.id = guid();
-      restaurant.summary = 'new summary';
       _restaurants.unshift(restaurant);
   }
 }
