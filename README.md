@@ -1,5 +1,7 @@
 # RestaurantRoulette
-A web application to help you with your restaurant decisions. Written using React, Webpack and ES6 syntax.
+A web application to help you with your restaurant decisions.
+
+Written using React, Webpack, ES6 syntax and the Flux architecutre in mind.
 
 ### Installation
 
