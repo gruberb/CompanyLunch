@@ -1,5 +1,5 @@
 # RestaurantRoulette
-A web application to help you with your restaurant decisions
+A web application to help you with your restaurant decisions. Written using React, Webpack and ES6 syntax.
 
 ### Installation
 
