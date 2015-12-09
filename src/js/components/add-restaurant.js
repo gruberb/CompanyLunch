@@ -16,8 +16,7 @@ class AddRestaurant extends React.Component{
           {
             title: this.refs.title.value,
             description: this.refs.description.value,
-            cost: this.refs.cost.value,
-            summary: this.refs.summary.value
+            cost: this.refs.cost.value
           }
       }
     );
@@ -28,7 +27,6 @@ class AddRestaurant extends React.Component{
     this.refs.title.value = '';
     this.refs.description.value = '';
     this.refs.cost.value = '';
-    this.refs.summary.value = '';
   }
 
   render() {
@@ -41,17 +39,12 @@ class AddRestaurant extends React.Component{
         </div>
         <div>
           <label>Description
-            <textarea ref="description" onChange={ this._onChange } rows="3" placeholder="This place has a nice terasse."/>
+            <input type="text" ref="description" onChange={ this._onChange } placeholder="This place has a nice terasse."/>
           </label>
         </div>
         <div>
           <label>Cost
             <input type="number" ref="cost" onChange={ this._onChange } />
-          </label>
-        </div>
-        <div>
-          <label>Summary
-            <input type="text" ref="summary" onChange={ this._onChange } placeholder="Pretty packed but cheap and good food."/>
           </label>
         </div>
         <button className="button" onClick={ this._saveRestaurant }>Save</button>

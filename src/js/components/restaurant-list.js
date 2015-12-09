@@ -36,7 +36,6 @@ class RestaurantList extends React.Component{
           <tr>
             <th>Name</th>
             <th>Description</th>
-            <th>Summary</th>
             <th>Cost</th>
             <th>Actions</th>
           </tr>

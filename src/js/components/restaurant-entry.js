@@ -7,7 +7,6 @@ export default ( props ) => {
     <tr>
       <td>{ props.restaurant.title }</td>
       <td>{ props.restaurant.description }</td>
-      <td>{ props.restaurant.summary }</td>
       <td>{ props.restaurant.cost }</td>
       <td><RemoveButton handler={ AppActions.removeRestaurant.bind(null, props.restaurant) } txt='Remove' /></td>
     </tr>

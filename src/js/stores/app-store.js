@@ -11,7 +11,6 @@ for ( let i = 1; i < 9; i++) {
   _restaurants.push({
     'id': guid(),
     'title': 'Restaurant #' + i,
-    'summary': 'Super ' + i + ' restaurant',
     'description': 'Super lecker',
     'cost': i
   });
