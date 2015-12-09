@@ -26,16 +26,25 @@ class RestaurantList extends React.Component{
   }
 
   render() {
-    console.log('render restaurant-list');
-    window.restaurants = this.state.restaurants;
     let restaurants = this.state.restaurants.map( restaurant => {
       return <RestaurantEntry key={ restaurant.id } restaurant={ restaurant } />
     })
 
     return (
-      <div>
-        { restaurants }
-      </div>
+      <table width="100%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Summary</th>
+            <th>Cost</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          { restaurants }
+        </tbody>
+      </table>
     )
   }
 };

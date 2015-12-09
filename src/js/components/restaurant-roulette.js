@@ -1,14 +1,21 @@
 import React from 'react';
 import RestaurantList from './restaurant-list';
 import AddRestaurant from './add-restaurant';
+import Header from './header';
+import Navbar from './navbar';
 
 class RestaurantRoulette extends React.Component{
   render() {
     return (
-      <div className='row'>
-        <AddRestaurant />
-        <RestaurantList />
+      <div>
+        <Navbar site_title='RestaurantRoulette' share_button='Share' />
+        <div className='row'>
+          <Header headertxt='Let me help choosing your Restaurant!' />
+          <AddRestaurant />
+          <RestaurantList />
+        </div>
       </div>
+
     )
   }
 }
