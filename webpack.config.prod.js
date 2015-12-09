@@ -20,6 +20,10 @@ module.exports = {
                 cacheDirectory: true,
                 presets: ['es2015', 'react']
             }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
   },

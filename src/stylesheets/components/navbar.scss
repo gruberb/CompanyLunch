@@ -1,0 +1,23 @@
+ul {
+  list-style-type: none;
+  margin: 0 0 30px 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #f1f1f1;
+}
+li {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: default;
+
+  &:not(:nth-child(1)):hover {
+    background: #c6c6c6;
+    color: black;
+    cursor: pointer;
+  }
+}
