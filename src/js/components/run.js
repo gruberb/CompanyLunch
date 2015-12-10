@@ -24,7 +24,7 @@ class Run extends React.Component{
       <div className="row winner">
         <h2>{winner.title}</h2>
         <p>{winner.description}</p>
-        <Link to="/">Go Back!</Link>
+        <Link to="/" className="backButton"><button className="button" >Go Back!</button></Link>
       </div>
 
     );

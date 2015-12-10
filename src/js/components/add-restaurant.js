@@ -47,7 +47,7 @@ class AddRestaurant extends React.Component{
             <input type="number" ref="cost" onChange={ this._onChange } />
           </label>
         </div>
-        <button className="button" onClick={ this._saveRestaurant }>Save</button>
+        <button className="button success" onClick={ this._saveRestaurant }>Save</button>
       </div>
     )
   }

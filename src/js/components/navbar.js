@@ -5,7 +5,7 @@ require('../../stylesheets/components/navbar.scss');
 
 export default (props) => {
   return (
-    <ul>
+    <ul className="navigation">
       <li>RestaurantRoulette</li>
       <Link to="/run">Run</Link>
       <li>Save</li>
