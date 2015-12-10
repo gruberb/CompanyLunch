@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 require('../../stylesheets/components/navbar.scss');
 
 export default (props) => {
   return (
     <ul>
-      <li>{props.brand}</li>
-      <li>{props.run}</li>
-      <li>{props.share}</li>
+      <li>RestaurantRoulette</li>
+      <Link to="/run">Run</Link>
+      <li>Save</li>
     </ul>
   )
 }
