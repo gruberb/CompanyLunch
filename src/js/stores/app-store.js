@@ -7,15 +7,6 @@ const CHANGE_EVENT = 'change';
 
 var _restaurants = [];
 
-for ( let i = 1; i < 9; i++) {
-  _restaurants.push({
-    'id': guid(),
-    'title': 'Restaurant #' + i,
-    'description': 'Super lecker',
-    'cost': i
-  });
-}
-
 const _removeRestaurant = ( restaurant ) => {
   _restaurants.splice( _restaurants.findIndex( i => i === restaurant ), 1 );
 };
@@ -44,7 +35,8 @@ const AppStore = Object.assign( EventEmitter.prototype, {
     this.removeListener( CHANGE_EVENT, callback )
   },
 
-  getRestaurants() {
+  getRestaurants(workspace_id) {
+    console.log('get them with id', workspace_id);
     return _restaurants;
   },
 

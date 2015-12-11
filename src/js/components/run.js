@@ -15,12 +15,12 @@ class Run extends React.Component{
     this.state = { restaurants: restaurants() };
   }
 
-  componentWillMount() {
-    console.log('run will mount');
-  }
-
   _goBack() {
     history.back();
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

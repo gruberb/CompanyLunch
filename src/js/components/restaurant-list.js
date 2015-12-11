@@ -2,14 +2,14 @@ import React from 'react';
 import AppStore from '../stores/app-store';
 import RestaurantEntry from './restaurant-entry';
 
-const restaurants = () => {
-  return { restaurants: AppStore.getRestaurants() };
+const restaurants = (workspace_id) => {
+  return { restaurants: AppStore.getRestaurants(workspace_id) };
 }
 
 class RestaurantList extends React.Component{
-  constructor() {
-    super();
-    this.state = restaurants();
+  constructor(props) {
+    super(props);
+    this.state = restaurants(props.workspace_id);
     this._onChange = this._onChange.bind(this);
   }
 
