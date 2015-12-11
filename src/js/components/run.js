@@ -1,6 +1,5 @@
 import React from 'react';
 import AppStore from '../stores/app-store';
-import { shuffle } from '../lib/utils';
 import { Link } from 'react-router';
 import _ from 'underscore';
 
