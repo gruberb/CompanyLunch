@@ -22,6 +22,13 @@ const _addRestaurant = ( restaurant ) => {
   }
 }
 
+const _initRestaurants = ( workspace ) => {
+   _restaurants = [];
+  workspace.body.data.restaurants.forEach( function( restaurant ) {
+    _restaurants.push( restaurant );
+  });
+}
+
 const AppStore = Object.assign( EventEmitter.prototype, {
   emitChange() {
     this.emit( CHANGE_EVENT )
@@ -35,8 +42,7 @@ const AppStore = Object.assign( EventEmitter.prototype, {
     this.removeListener( CHANGE_EVENT, callback )
   },
 
-  getRestaurants(workspace_id) {
-    console.log('get them with id', workspace_id);
+  getRestaurants() {
     return _restaurants;
   },
 
@@ -48,8 +54,8 @@ const AppStore = Object.assign( EventEmitter.prototype, {
       case AppConstant.REMOVE_RESTAURANT:
         _removeRestaurant( action.item );
         break;
-      case AppConstant.FIND_RESTAURANT:
-        _findRestaurant( action.item );
+      case AppConstant.GET_WORKSPACE:
+        _initRestaurants( action.item );
         break;
     }
 

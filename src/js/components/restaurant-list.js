@@ -1,16 +1,18 @@
 import React from 'react';
 import AppStore from '../stores/app-store';
+import AppActions from '../actions/app-actions';
 import RestaurantEntry from './restaurant-entry';
 
-const restaurants = (workspace_id) => {
-  return { restaurants: AppStore.getRestaurants(workspace_id) };
+const restaurants = () => {
+  return { restaurants: AppStore.getRestaurants() };
 }
 
 class RestaurantList extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = restaurants(props.workspace_id);
-    this._onChange = this._onChange.bind(this);
+  constructor( props ) {
+    super( props );
+    AppActions.getWorkspace('566ae27f95be89fef0614d47');
+    this.state = restaurants();
+    this._onChange = this._onChange.bind( this );
   }
 
   componentWillMount() {
@@ -27,7 +29,7 @@ class RestaurantList extends React.Component{
 
   render() {
     let restaurants = this.state.restaurants.map( restaurant => {
-      return <RestaurantEntry key={ restaurant.id } restaurant={ restaurant } />
+      return <RestaurantEntry key={ restaurant._id } restaurant={ restaurant } />
     })
 
     return (

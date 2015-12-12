@@ -4,7 +4,7 @@ import AddRestaurant from './add-restaurant';
 import Header from './header';
 import Navbar from './navbar';
 
-class RestaurantRoulette extends React.Component{
+class RestaurantRoulette extends React.Component {
   render() {
     return (
       <div>
