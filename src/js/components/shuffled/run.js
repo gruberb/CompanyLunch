@@ -1,9 +1,9 @@
 import React from 'react';
-import AppStore from '../stores/app-store';
+import AppStore from '../../stores/app-store';
 import { Link } from 'react-router';
 import _ from 'underscore';
 
-require('../../stylesheets/components/run.scss');
+require('../../../stylesheets/components/run.scss');
 
 const restaurants = () => {
   return AppStore.getRestaurants();

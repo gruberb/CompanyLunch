@@ -1,6 +1,6 @@
 import React from 'react';
-import AppStore from '../stores/app-store';
-import AppActions from '../actions/app-actions';
+import AppStore from '../../stores/app-store';
+import AppActions from '../../actions/app-actions';
 import RestaurantEntry from './restaurant-entry';
 
 const restaurants = () => {

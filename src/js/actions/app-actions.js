@@ -1,7 +1,7 @@
 import AppConstants from '../constants/app-constants';
 import { dispatch, register } from '../dispatchers/app-dispatcher';
 import Api from '../lib/api';
-import history from '../components/history'
+import history from '../lib/history'
 
 export default {
   addRestaurant ( restaurant ) {
@@ -19,6 +19,7 @@ export default {
       });
   },
   createWorkspace( workspace ) {
+    console.log('inside actions created workspace');
     Api.createWorkspace( workspace )
       .then(function( workspace ) {
         dispatch({ actionType: AppConstants.CREATE_WORKSPACE, workspace });
@@ -28,8 +29,10 @@ export default {
       });
   },
   updateWorkspace( workspace_id, workspace ) {
+    console.log('inside actions update workspace');
     Api.updateWorkspace( workspace_id, workspace )
       .then(function( workspace ) {
+        console.log('workspace updated', workspace);
         dispatch({ actionType: AppConstants.UPDATE_WORKSPACE, workspace });
       }, function(error) {
         dispatch({ actionType: AppConstants.FAILED_TO_UPDATE, error });

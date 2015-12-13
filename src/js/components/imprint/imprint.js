@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('../../stylesheets/components/impressum.scss');
+require('../../../stylesheets/components/impressum.scss');
 
 class Impressum extends React.Component{
   render() {

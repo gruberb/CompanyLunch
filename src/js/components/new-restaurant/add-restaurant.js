@@ -1,6 +1,6 @@
 import React from 'react';
-import AppActions from '../actions/app-actions';
-import AppStore from '../stores/app-store';
+import AppActions from '../../actions/app-actions';
+import AppStore from '../../stores/app-store';
 
 class AddRestaurant extends React.Component{
   constructor() {

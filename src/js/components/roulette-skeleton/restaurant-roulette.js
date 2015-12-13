@@ -1,8 +1,8 @@
 import React from 'react';
-import RestaurantList from './restaurant-list';
-import AddRestaurant from './add-restaurant';
-import Header from './header';
-import Navbar from './navbar';
+import RestaurantList from '../restaurant-list/restaurant-list';
+import AddRestaurant from '../new-restaurant/add-restaurant';
+import Header from '../new-restaurant/header';
+import Navbar from '../navigation/navbar';
 
 class RestaurantRoulette extends React.Component {
   render() {

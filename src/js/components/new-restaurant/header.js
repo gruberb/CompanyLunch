@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('../../stylesheets/components/header.scss');
+require('../../../stylesheets/components/header.scss');
 
 export default (props) => {
   return (

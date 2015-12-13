@@ -1,10 +1,10 @@
 import React from 'react';
-import AppActions from '../actions/app-actions';
-import AppStore from '../stores/app-store';
+import AppActions from '../../actions/app-actions';
+import AppStore from '../../stores/app-store';
 import SaveButton from './save-button';
 import { Link } from 'react-router';
 
-require('../../stylesheets/components/navbar.scss');
+require('../../../stylesheets/components/navbar.scss');
 
 class Navbar extends React.Component{
   constructor( props) {
@@ -13,10 +13,13 @@ class Navbar extends React.Component{
   }
 
   _saveWorkspace() {
+    console.log('save workspace');
     let workspace_id = this.props.workspace_id;
     if(workspace_id) {
+      console.log('id provieded, therfore update worksapce');
       AppActions.updateWorkspace(workspace_id, AppStore.getRestaurants());
     } else {
+      console.log('no workspace id, therefore create workspace');
       AppActions.createWorkspace(AppStore.getRestaurants());
     }
   }
