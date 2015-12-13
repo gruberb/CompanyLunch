@@ -22,8 +22,16 @@ ul.navigation {
 
     &:not(:nth-child(1)):hover {
       color: black;
-      cursor: pointer;
       border-bottom: 3px solid rgb(30,133,226);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.infoNav {
+      right: 20px;
+      position: absolute;
     }
   }
 

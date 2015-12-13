@@ -7,20 +7,27 @@ import { Link } from 'react-router';
 require('../../stylesheets/components/navbar.scss');
 
 class Navbar extends React.Component{
-  constructor() {
-    super();
+  constructor( props) {
+    super( props );
+    this._saveWorkspace = this._saveWorkspace.bind( this );
   }
 
-  createWorkspace() {
-    AppActions.createWorkspace(AppStore.getRestaurants());
+  _saveWorkspace() {
+    let workspace_id = this.props.workspace_id;
+    if(workspace_id) {
+      AppActions.updateWorkspace(workspace_id, AppStore.getRestaurants());
+    } else {
+      AppActions.createWorkspace(AppStore.getRestaurants());
+    }
   }
 
   render() {
     return (
       <ul className="navigation">
-      <li>RestaurantRoulette</li>
-      <Link to="run">Run</Link>
-      <li><SaveButton createWorkspace={this.createWorkspace} /></li>
+        <Link to="/">CompanyLunch</Link>
+        <li><SaveButton saveWorkspace={this._saveWorkspace} /></li>
+        <Link to="run">Run</Link>
+        <Link to="impressum" className="infoNav">Imprint</Link>
       </ul>
     );
   }

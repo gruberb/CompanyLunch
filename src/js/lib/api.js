@@ -19,6 +19,15 @@ var Api = {
         .end(function(err, res) {
           return res.body.data;
         });
+    },
+    updateWorkspace: function( workspace_id, workspace ) {
+      return request
+        .put(API_URL + 'workspaces/' + workspace_id)
+        .set('Accept', 'application/json')
+        .send({ workspace: workspace })
+        .end(function(err, res) {
+          return res.body.data;
+        });
     }
 };
 

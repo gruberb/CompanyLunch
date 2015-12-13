@@ -1,7 +1,6 @@
 import { dispatch, register } from '../dispatchers/app-dispatcher';
 import AppConstant from '../constants/app-constants';
 import { EventEmitter } from 'events';
-import { guid } from '../lib/utils';
 
 const CHANGE_EVENT = 'change';
 
@@ -19,7 +18,7 @@ const _addRestaurant = ( restaurant ) => {
   if( !!!_findRestaurant( restaurant ) ) {
       _restaurants.unshift(restaurant);
   } else {
-    console.log(restaurant);
+    // restaurant is already in the list
   }
 }
 

@@ -8,10 +8,9 @@ class RestaurantRoulette extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar workspace_id={this.props.routeParams.workspace_id} />
         <div className='row'>
-          <Header headertxt='Let me help choosing your Restaurant!'
-                  explanation='Fill out the form fields and click the save button.' />
+          <Header />
           <AddRestaurant />
           <RestaurantList workspace_id={this.props.routeParams.workspace_id}/>
         </div>
