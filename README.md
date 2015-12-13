@@ -5,7 +5,7 @@ Written using React, Webpack, ES6 syntax and the Flux architecutre in mind.
 
 ### Installation
 
-1. `git clone git@github.com:gruberb/RestaurantRoulette.git`
+1. `git clone git@github.com:gruberb/CompanyLunch.git`
 2. `cd RestaurantRoulette`
 3. `npm install webpack -g`
 4. `npm install`
