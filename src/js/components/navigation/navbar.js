@@ -28,6 +28,7 @@ class Navbar extends React.Component{
         <SaveButton saveWorkspace={this._saveWorkspace} />
         <Link to="run">Run</Link>
         <Link to="impressum" className="infoNav">Imprint</Link>
+        <a className="gitHubLink" href="https://github.com/gruberb/CompanyLunch" target="_blank">GitHub</a>
       </ul>
     );
   }

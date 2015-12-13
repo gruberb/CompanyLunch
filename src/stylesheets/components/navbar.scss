@@ -33,6 +33,11 @@ ul.navigation {
       right: 20px;
       position: absolute;
     }
+
+    &.gitHubLink {
+      right: 100px;
+      position: absolute;
+    }
   }
 
   input[type="button"] {
