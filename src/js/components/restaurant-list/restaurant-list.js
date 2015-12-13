@@ -43,8 +43,6 @@ class RestaurantList extends React.Component {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Description</th>
-            <th>Cost</th>
             <th>Actions</th>
           </tr>
         </thead>
