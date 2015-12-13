@@ -10,7 +10,7 @@ ul.navigation {
   z-index: 100;
   position: fixed;
   width: 100%;
-  
+
   li, a {
     float: left;
     display: block;
@@ -25,5 +25,10 @@ ul.navigation {
       cursor: pointer;
       border-bottom: 3px solid rgb(30,133,226);
     }
+  }
+
+  input[type="button"] {
+    background-color: white;
+    border: none;
   }
 }
