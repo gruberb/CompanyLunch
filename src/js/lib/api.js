@@ -1,4 +1,4 @@
-var request = require('superagent'); // (1)
+var request = require('superagent');
 
 var API_URL = 'https://companylunch.herokuapp.com/api/';
 
