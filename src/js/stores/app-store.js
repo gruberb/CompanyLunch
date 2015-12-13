@@ -12,21 +12,19 @@ const _removeRestaurant = ( restaurant ) => {
 };
 
 const _findRestaurant = ( restaurant ) => {
-  return _restaurants.find( _restaurant => _restaurant.id === restaurant.id );
+  return _restaurants.find( _restaurant => _restaurant.title === restaurant.title );
 }
 
 const _addRestaurant = ( restaurant ) => {
   if( !!!_findRestaurant( restaurant ) ) {
-      restaurant.id = guid();
       _restaurants.unshift(restaurant);
+  } else {
+    console.log(restaurant);
   }
 }
 
 const _initRestaurants = ( workspace ) => {
-   _restaurants = [];
-  workspace.body.data.restaurants.forEach( function( restaurant ) {
-    _restaurants.push( restaurant );
-  });
+  _restaurants = workspace.body.data.restaurants;
 }
 
 const AppStore = Object.assign( EventEmitter.prototype, {
@@ -49,13 +47,13 @@ const AppStore = Object.assign( EventEmitter.prototype, {
   dispatcherIndex: register( function( action ) {
     switch( action.actionType ) {
       case AppConstant.ADD_RESTAURANT:
-        _addRestaurant( action.item );
+        _addRestaurant( action.restaurant );
         break;
       case AppConstant.REMOVE_RESTAURANT:
-        _removeRestaurant( action.item );
+        _removeRestaurant( action.restaurant );
         break;
       case AppConstant.GET_WORKSPACE:
-        _initRestaurants( action.item );
+        _initRestaurants( action.workspace );
         break;
     }
 

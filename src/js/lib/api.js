@@ -10,6 +10,15 @@ var Api = {
         .end(function(err, res) {
           return res.body.data;
         });
+    },
+    createWorkspace: function( workspace ) {
+      return request
+        .post(API_URL + 'workspaces')
+        .set('Accept', 'application/json')
+        .send({ workspace: workspace })
+        .end(function(err, res) {
+          return res.body.data;
+        });
     }
 };
 

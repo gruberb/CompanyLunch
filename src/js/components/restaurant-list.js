@@ -7,11 +7,10 @@ const restaurants = () => {
   return { restaurants: AppStore.getRestaurants() };
 }
 
-class RestaurantList extends React.Component{
+class RestaurantList extends React.Component {
   constructor( props ) {
     super( props );
-    AppActions.getWorkspace('566ae27f95be89fef0614d47');
-    this.state = restaurants();
+    this._initRestaurants(props.workspace_id);
     this._onChange = this._onChange.bind( this );
   }
 
@@ -23,13 +22,20 @@ class RestaurantList extends React.Component{
     AppStore.removeChangeListener( this._onChange );
   }
 
+  _initRestaurants( workspace_id ) {
+    if( workspace_id ) {
+      AppActions.getWorkspace( workspace_id );
+    }
+    this.state = restaurants();
+  }
+
   _onChange() {
     this.setState( restaurants );
   }
 
   render() {
     let restaurants = this.state.restaurants.map( restaurant => {
-      return <RestaurantEntry key={ restaurant._id } restaurant={ restaurant } />
+      return <RestaurantEntry key={ restaurant.title } restaurant={ restaurant } />
     })
 
     return (

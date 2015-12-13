@@ -1,14 +1,29 @@
 import React from 'react';
+import AppActions from '../actions/app-actions';
+import AppStore from '../stores/app-store';
+import SaveButton from './save-button';
 import { Link } from 'react-router';
 
 require('../../stylesheets/components/navbar.scss');
 
-export default (props) => {
-  return (
-    <ul className="navigation">
+class Navbar extends React.Component{
+  constructor() {
+    super();
+  }
+
+  createWorkspace() {
+    AppActions.createWorkspace(AppStore.getRestaurants());
+  }
+
+  render() {
+    return (
+      <ul className="navigation">
       <li>RestaurantRoulette</li>
       <Link to="run">Run</Link>
-      <li>Save</li>
-    </ul>
-  )
-}
+      <li><SaveButton createWorkspace={this.createWorkspace} /></li>
+      </ul>
+    );
+  }
+};
+
+export default Navbar;
