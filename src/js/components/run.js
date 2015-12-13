@@ -13,6 +13,7 @@ class Run extends React.Component{
   constructor() {
     super();
     this.state = { restaurants: restaurants() };
+    this._getWinner = this._getWinner.bind(this);
   }
 
   _goBack() {
@@ -23,14 +24,23 @@ class Run extends React.Component{
     return false;
   }
 
-  render() {
-    var winner = _.shuffle(this.state.restaurants)[0];
+  _getWinner() {
+    if(this.state.restaurants.length > 0) {
+      return _.shuffle(this.state.restaurants)[0];
+    } else {
+      return {title: "You didn't enter a restaurant", description: "Go back and enter at least one favourite place of yours!" };
+    }
+  }
 
+  render() {
+    let winner = this._getWinner();
+    console.log(winner);
     return (
-      <div className="row winner">
-        <h2>{winner.title}</h2>
-        <p>{winner.description}</p>
-        <button className="button" onClick={this._goBack}>Go Back!</button>
+      <div className="row winner text-center">
+        <h4>And the winner is:</h4>
+        <h2>{ winner.title }</h2>
+        <p>{ winner.description }</p>
+        <button className="button" onClick={ this._goBack }>Go Back!</button>
       </div>
 
     );

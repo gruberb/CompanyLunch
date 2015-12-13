@@ -1,3 +1,11 @@
 .winner {
-  padding-top: 80px;
+  padding-top: 80px !important;
+}
+
+.callout.success a {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
 }

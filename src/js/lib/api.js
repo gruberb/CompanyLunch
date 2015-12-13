@@ -1,6 +1,6 @@
 var request = require('superagent'); // (1)
 
-var API_URL = 'http://localhost:5000/api/';
+var API_URL = 'https://companylunch.herokuapp.com/api/';
 
 var Api = {
     getWorkspace: function(workspace_id) {
