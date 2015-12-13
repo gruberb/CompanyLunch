@@ -25,7 +25,7 @@ class Navbar extends React.Component{
     return (
       <ul className="navigation">
         <Link to="/">CompanyLunch</Link>
-        <li><SaveButton saveWorkspace={this._saveWorkspace} /></li>
+        <SaveButton saveWorkspace={this._saveWorkspace} />
         <Link to="run">Run</Link>
         <Link to="impressum" className="infoNav">Imprint</Link>
       </ul>
