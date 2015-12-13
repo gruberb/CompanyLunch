@@ -30,7 +30,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin({minimize: true}),
     new HtmlWebpackPlugin({
-      title: 'RestaurantRoulette',
+      title: 'CompanyLunch',
       template: path.resolve(__dirname, 'src/index-template.html'),
       inject: 'body'
     })

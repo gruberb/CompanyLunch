@@ -13,13 +13,10 @@ class Navbar extends React.Component{
   }
 
   _saveWorkspace() {
-    console.log('save workspace');
     let workspace_id = this.props.workspace_id;
     if(workspace_id) {
-      console.log('id provieded, therfore update worksapce');
       AppActions.updateWorkspace(workspace_id, AppStore.getRestaurants());
     } else {
-      console.log('no workspace id, therefore create workspace');
       AppActions.createWorkspace(AppStore.getRestaurants());
     }
   }

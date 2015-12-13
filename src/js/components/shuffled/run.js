@@ -34,7 +34,6 @@ class Run extends React.Component{
 
   render() {
     let winner = this._getWinner();
-    console.log(winner);
     return (
       <div className="row winner text-center">
         <h4>And the winner is:</h4>
