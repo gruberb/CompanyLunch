@@ -1,4 +1,4 @@
-# CompanyLunch
+# CompanyLunch [![Code Climate](https://codeclimate.com/github/gruberb/CompanyLunch/badges/gpa.svg)](https://codeclimate.com/github/gruberb/CompanyLunch)  
 A web application to help you with your restaurant decisions.
 
 Written using React, Webpack, ES6 syntax and the Flux architecutre in mind.
