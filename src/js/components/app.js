@@ -17,4 +17,4 @@ export default () => {
       </Route>
     </Router>
   );
-}
+};

@@ -5,7 +5,7 @@ import RestaurantEntry from './restaurant-entry';
 
 const restaurants = () => {
   return { restaurants: AppStore.getRestaurants() };
-}
+};
 
 class RestaurantList extends React.Component {
   constructor( props ) {
@@ -35,8 +35,8 @@ class RestaurantList extends React.Component {
 
   render() {
     let restaurants = this.state.restaurants.map( restaurant => {
-      return <RestaurantEntry key={ restaurant.title } restaurant={ restaurant } />
-    })
+      return <RestaurantEntry key={ restaurant.title } restaurant={ restaurant } />;
+    });
 
     return (
       <table width="100%">
@@ -44,13 +44,13 @@ class RestaurantList extends React.Component {
           <tr>
             <th>Name</th>
             <th>Actions</th>
-          </tr>
+            </tr>
         </thead>
         <tbody>
           { restaurants }
         </tbody>
       </table>
-    )
+    );
   }
 };
 
