@@ -13,8 +13,7 @@ class RestaurantRoulette extends React.Component {
           <RestaurantList workspace_id={this.props.routeParams.workspace_id}/>
         </div>
       </div>
-
-    )
+    );
   }
 }
 

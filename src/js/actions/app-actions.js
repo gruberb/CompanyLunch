@@ -1,7 +1,7 @@
 import AppConstants from '../constants/app-constants';
 import { dispatch, register } from '../dispatchers/app-dispatcher';
 import Api from '../lib/api';
-import history from '../lib/history'
+import history from '../lib/history';
 
 export default {
   addRestaurant ( restaurant ) {
@@ -35,5 +35,4 @@ export default {
         dispatch({ actionType: AppConstants.FAILED_TO_UPDATE, error });
       });
   }
-
-}
+};

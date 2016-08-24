@@ -7,7 +7,7 @@ require('../../../stylesheets/components/run.scss');
 
 const restaurants = () => {
   return AppStore.getRestaurants();
-}
+};
 
 class Run extends React.Component{
   constructor() {
@@ -40,7 +40,6 @@ class Run extends React.Component{
         <h1>{ winner.title }</h1>
         <button className="button" onClick={ this._goBack }>Go Back!</button>
       </div>
-
     );
   }
 }

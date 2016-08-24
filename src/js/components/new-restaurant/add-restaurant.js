@@ -33,7 +33,7 @@ class AddRestaurant extends React.Component{
       <div className="enterName">
         <input type="text" ref="title" onChange={ this._onChange } onKeyPress={ this._saveRestaurant} placeholder="Italian place"/>
       </div>
-    )
+    );
   }
 };
 
