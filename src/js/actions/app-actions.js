@@ -22,7 +22,7 @@ export default {
     Api.createWorkspace( workspace )
       .then(function( workspace ) {
         dispatch({ actionType: AppConstants.CREATE_WORKSPACE, workspace });
-        history.replaceState(null, '#/workspace/' + workspace.body.data._id);
+        history.replaceState(null, '/CompanyLunch/#/workspace/' + workspace.body.data._id);
       }, function(error) {
         dispatch({ actionType: AppConstants.FAILED_TO_CREATE, error });
       });
